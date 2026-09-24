@@ -1,4 +1,5 @@
 232. Implement Queue using Stacks
+
 Problem
 
 Implement a first in first out (FIFO) queue using only two stacks.
@@ -6,16 +7,22 @@ Implement a first in first out (FIFO) queue using only two stacks.
 The implemented queue should support the following operations:
 
 push(x) – Push element x to the back of the queue.
+
 pop() – Removes the element from the front of the queue and returns it.
+
 peek() – Returns the element at the front of the queue.
+
 empty() – Returns whether the queue is empty.
+
 Example
+
 Input:
 ["MyQueue", "push", "push", "peek", "pop", "empty"]
 [[], [1], [2], [], [], []]
 
 Output:
 [null, null, null, 1, 1, false]
+
 Optimal Solution
 
 Algorithm Used: Two Stacks
@@ -27,6 +34,7 @@ A queue follows FIFO (First In, First Out) order, while a stack follows LIFO (La
 To implement a queue using stacks, we use two stacks:
 
 stack1 stores the elements in their normal insertion order.
+
 stack2 is used temporarily to reverse the order when performing pop() or peek().
 
 For push():
@@ -36,9 +44,13 @@ Add the new element directly to stack1.
 For pop():
 
 Move all elements from stack1 to stack2.
+
 The oldest element is now at the top of stack2.
+
 Remove and store that element.
+
 Move the remaining elements back to stack1.
+
 Return the removed element.
 
 For peek():
@@ -52,13 +64,21 @@ Check whether stack1 is empty.
 This converts the stack's LIFO behavior into the queue's FIFO behavior.
 
 Time Complexity
+
 push() → O(1)
+
 pop() → O(n)
+
 peek() → O(n)
+
 empty() → O(1)
+
 Space Complexity
+
 O(n)
+
 Java Solution
+
 import java.util.Stack;
 
 class MyQueue {
@@ -109,16 +129,41 @@ class MyQueue {
         return stack1.isEmpty();
     }
 }
+
 Summary
-LeetCode Problem	Algorithm Used	Time Complexity	Space Complexity
-232. Implement Queue using Stacks	Two Stacks	O(n) for pop() / peek()	O(n)
+
+LeetCode Problem
+
+Algorithm Used
+
+Time Complexity
+
+Space Complexity
+
+232. Implement Queue using Stacks
+
+Two Stacks
+
+O(n) for pop() / peek()
+
+O(n)
+
 Concepts Covered
+
 Queue
+
 Stack
+
 FIFO
+
 LIFO
+
 Two-Stack Technique
+
 Data Structure Implementation
+
 Stack Operations
+
 O(n) Time Complexity
+
 O(n) Space Complexity
