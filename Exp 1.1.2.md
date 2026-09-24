@@ -23,7 +23,7 @@ Instead of using division:
 2. Traverse from right to left while maintaining the product of all elements to the right.
 3. Multiply the left product and right product to obtain the final answer.
 
-This avoids division and satisfies the required time complexity.
+This avoids division and satisfies the required time complexity
 
 ### Time Complexity
 
