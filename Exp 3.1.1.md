@@ -27,10 +27,13 @@ The base cases are:
 - ways(1) = 1
 - ways(2) = 2
 We only need the previous two results to calculate the next result, so we can use two variables instead of storing a full DP array.
+
 Time Complexity
 - O(n) because we calculate the answer for each step once.
 Space Complexity
 - O(1) because we use only a constant number of variables.
+
+  
 Java Solution
 class Solution {
 
