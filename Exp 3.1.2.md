@@ -1,4 +1,5 @@
 Frog Jump (Problem 1)
+
 Problem
 A frog is standing on the first stair of a staircase containing n stairs. An array heights gives the height of each stair.
 
@@ -6,6 +7,7 @@ The frog can jump either:
 - One stair: the energy used is abs(heights[i] - heights[i - 1]).
 - Two stairs: the energy used is abs(heights[i] - heights[i - 2]).
 Return the minimum total energy required for the frog to reach the last stair.
+
 Example
 Input:
 n = 4
@@ -13,10 +15,12 @@ heights = [10, 20, 30, 10]
 
 Output:
 20
+
 Explanation: One minimum-energy path is:
 - Jump from stair 1 (height 10) to stair 2 (height 20): energy = 10.
 - Jump from stair 2 (height 20) to stair 4 (height 10): energy = 10.
 Total energy = 10 + 10 = 20.
+
 Optimal Solution
 Algorithm Used: Dynamic Programming (Space-Optimized)
 Idea
@@ -29,6 +33,7 @@ To reach stair i, the frog can come from either stair i - 1 or stair i - 2. Ther
 The first stair requires no energy, so dp[0] = 0.
 
 Instead of storing a full DP array, we keep only the previous two results because each new result depends only on them.
+
 Time Complexity
 - O(n) because each stair is processed once.
 Space Complexity
